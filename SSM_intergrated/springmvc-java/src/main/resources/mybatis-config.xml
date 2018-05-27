@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--这里可以写MaBatis的许多配置,如下面为pojo配置别名,以后就可以在mapper映射文件中使用-->
+    <typeAliases>
+        <typeAlias type="top.sqmax.pojo.Role" alias="Role"/>
+    </typeAliases>
+    <!--<settings>-->
+        <!--<setting name="" value=""/>-->
+    <!--</settings>-->
+
+    <!-- 指定映射器路径 -->
+    <mappers>
+        <mapper resource="top/sqmax/mapper/RoleMapper.xml" />
+    </mappers>
+</configuration>
