@@ -1,4 +1,4 @@
-package com.ssm.chapter13.service.impl;
+package top.sqmax.service.impl;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import com.ssm.chapter13.pojo.Role;
-import com.ssm.chapter13.service.RoleListService;
-import com.ssm.chapter13.service.RoleService;
+import top.sqmax.pojo.Role;
+import top.sqmax.service.RoleListService;
+import top.sqmax.service.RoleService;
+
 @Service
 public class RoleListServiceImpl implements RoleListService {
 	@Autowired

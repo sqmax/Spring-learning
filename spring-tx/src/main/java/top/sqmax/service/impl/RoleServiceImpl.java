@@ -1,6 +1,4 @@
-package com.ssm.chapter13.service.impl;
-
-import java.util.List;
+package top.sqmax.service.impl;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import top.sqmax.mapper.RoleMapper;
+import top.sqmax.pojo.Role;
+import top.sqmax.service.RoleService;
 
-import com.ssm.chapter13.mapper.RoleMapper;
-import com.ssm.chapter13.pojo.Role;
-import com.ssm.chapter13.service.RoleService;
+import java.util.List;
 
 @Service
 public class RoleServiceImpl implements RoleService, ApplicationContextAware {

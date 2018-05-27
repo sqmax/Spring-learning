@@ -1,7 +1,7 @@
-package com.ssm.chapter13.mapper;
+package top.sqmax.mapper;
 
-import com.ssm.chapter13.pojo.Role;
 import org.springframework.stereotype.Repository;
+import top.sqmax.pojo.Role;
 
 @Repository
 public interface RoleMapper {

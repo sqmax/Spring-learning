@@ -4,6 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <mappers>
-        <mapper resource="com/ssm/chapter13/sqlMapper/RoleMapper.xml"/>
+        <mapper resource="top/sqmax/sqlMapper/RoleMapper.xml"/>
     </mappers>
 </configuration>

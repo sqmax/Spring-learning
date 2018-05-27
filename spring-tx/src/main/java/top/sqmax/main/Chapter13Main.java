@@ -1,12 +1,12 @@
-package com.ssm.chapter13.main;
-import java.util.ArrayList;
-import java.util.List;
+package top.sqmax.main;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.ssm.chapter13.pojo.Role;
-import com.ssm.chapter13.service.RoleListService;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.TransactionStatus;
+import top.sqmax.pojo.Role;
+import top.sqmax.service.RoleListService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Chapter13Main {
 	public static void main(String [] args) {

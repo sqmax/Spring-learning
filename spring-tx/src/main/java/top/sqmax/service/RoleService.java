@@ -1,8 +1,8 @@
-package com.ssm.chapter13.service;
+package top.sqmax.service;
+
+import top.sqmax.pojo.Role;
 
 import java.util.List;
-
-import com.ssm.chapter13.pojo.Role;
 
 public interface RoleService {
 	

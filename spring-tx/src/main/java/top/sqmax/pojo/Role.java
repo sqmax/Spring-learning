@@ -1,4 +1,4 @@
-package com.ssm.chapter13.pojo;
+package top.sqmax.pojo;
 
 public class Role {
 	private Long id;
