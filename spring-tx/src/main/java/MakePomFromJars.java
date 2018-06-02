@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.jar.JarInputStream;
 import java.util.jar.Manifest;
 
+//这是独立的一工具类，只需要在下面写入jar文件的目录，就可以根据jar文件生成pom依赖
 public class MakePomFromJars {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
