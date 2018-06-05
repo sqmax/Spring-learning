@@ -118,7 +118,8 @@
 
 #### MyBatis的配置文件
 
-上面在声明SqlSessionFactoryBean时，声明了使用的MyBatis的配置文件mybatis-config.xml，我们可以将它放在resource目录下，内容如下：
+上面web.xml中，我们配置了DispatcherServlet，Spring MVC配置相关的内容，就是DispatcherServlet的配置文件，在上面web.xml中，我们并没有显示指定它的配置文件名和路径。其实，Spring默认其在WEB-INF目录下，名字为`<dispatchername>-servlet.mxl`。如上面web.xml中，Dispatcher名字为dispatcher，那么它的默认文件就是`WEB-INF/dispatcher-servlet.xml`，它的内容如下：
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -144,7 +145,7 @@
 
 ### Spring MVC相关的xml配置
 
-Spring MVC配置相关的内容，就是DispatcherServlet的配置文件，在web.xml中，我们声明的是`WEB-INF/dispatcher-servlet.xml`，它的内容如下：
+上面web.xml中，我们配置了DispatcherServlet，Spring MVC配置相关的内容，就是DispatcherServlet的配置文件，在上面web.xml中，我们并没有显示指定它的配置文件名和路径。其实，Spring默认其在WEB-INF目录下，名字为`<dispatchername>-servlet.mxl`。如上面web.xml中，Dispatcher名字为dispatcher，那么它的默认文件就是`WEB-INF/dispatcher-servlet.xml`，它的内容如下：
 
 ```xml
 <?xml version='1.0' encoding='UTF-8' ?>
