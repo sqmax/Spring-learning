@@ -197,6 +197,7 @@ public class RoleListServiceImpl implements RoleListService {
 首先Spring通过事务管理器（`PlatformTransactionManager`的子类）创建事务，与此同时会把事务定义类（`Transcation`的之类）中的隔离级别、超时时间等属性根据配置内容往事务上设置。Spring通过反射的方式调度开发者的业务代码，但是反射的结果可能是正常返回或者产生异常返回，那么它给的约定是只要发生异常，并且符合事务定义类回滚条件的，Spring就会将数据库事务回滚，否则将数据库事务提交，这是Spring自己完成的。你会惊奇地发现，在整个开发过程中，只需编写业务代码和对事务属性进行配置就行了，并不需要使用代码干预，工作量比较少，代码逻辑也更为清晰，更有利于维护。    
 
 声明式事务的流程如下：
+
 ![spring-tx.PNG](https://i.loli.net/2018/05/17/5afd9cd6a6f12.png)
 
 ### 自调用问题
