@@ -7,7 +7,7 @@ Spring AOP的实现原理是动态代理，关于动态代理可以参见另一�
 
 在Spring中主要有如下几种方式来实现AOP。
 
-## 使用@AspectJ注解
+## 一、使用@AspectJ注解
 
 首先是我们的业务类
 
@@ -99,13 +99,13 @@ after....
 afterReturning.....
 ```
 
-## 使用xml的方式使用配置Spring AOP
+## 二、使用xml的方式配置Spring AOP
 
 暂不解释，下次遇到在总结。
 
-## 引入
+## 三、引入
 
-Spring还可以将代理的对象ga该在多个接口下，进而可以赋予被代理的对象跟多的功能。
+Spring还可以将代理的对象放在多个接口下，进而可以赋予被代理的对象更多的功能。
 
 下面用例子加以说明，使RoleService具有验证角色不为null的功能。
 
@@ -129,7 +129,7 @@ public class RoleVerifierImpl implements RoleVerifier {
 
 ```java
 @DeclareParents(value = "top.sqmax.service.impl.RoleServiceImpl+",defaultImpl = RoleVerifierImpl.class)
-    public RoleVerifier roleVerifier;
+public RoleVerifier roleVerifier;
 ```
 
 * 其中`value = "top.sqmax.service.impl.RoleServiceImpl+"`的意思就是对Spring容器中RoleServiceImpl的bean进行增强，将其挂在RoleVerifier接口下。
