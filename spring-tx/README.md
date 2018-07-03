@@ -2,7 +2,7 @@
 >里面还包含了一个根据jar文件生成pom依赖的工具类，可以独立使用。
 
 
-##数据库事务的基本知识
+## 一、数据库事务的基本知识
 
 ### 什么是事务
 
@@ -37,7 +37,7 @@
 
 
 
-## Spring事务管理
+## 二、Spring事务管理
 
 Spring事务管理高层抽象主要包括3个接口：
 
@@ -78,7 +78,7 @@ PROPAGATION_REQUIRED
 PROPAGATION_REQUIRES_NEW
 PROPAGATION_NESTED
 ```
-## 在Spring+MyBatis组合中使用事务
+## 三、在Spring+MyBatis组合中使用事务
 
 ### 配置事务管理器
 
@@ -193,7 +193,7 @@ public class RoleListServiceImpl implements RoleListService {
 ```
 这样insertRoleList方法调用了insertRole，而这两个方法都开启了事务，因为insertRole方法的事务传播行为是`REQUIRES_NEW`，所以会产生一个新的事务，
 
-## Spring事务原理的简单概述
+## 四、Spring事务原理的简单概述
 
 在Spring IoC容器初始化时，Spring会读入`@Transactional`注解或XML配置的事务信息，并且保存到一个事务定义类里面（`TransactionDefinition`接口的子类），以备将来使用。当运行时会让Spring拦截`@Transaction`注解标注的某一个方法或类的所有方法。谈到拦截，可能会想到AOP，Spring就是通过AOP把事务相关的功能按照注解里的属性来实现事务的。
 首先Spring通过事务管理器（`PlatformTransactionManager`的子类）创建事务，与此同时会把事务定义类（`Transcation`的之类）中的隔离级别、超时时间等属性根据配置内容往事务上设置。Spring通过反射的方式调度开发者的业务代码，但是反射的结果可能是正常返回或者产生异常返回，那么它给的约定是只要发生异常，并且符合事务定义类回滚条件的，Spring就会将数据库事务回滚，否则将数据库事务提交，这是Spring自己完成的。你会惊奇地发现，在整个开发过程中，只需编写业务代码和对事务属性进行配置就行了，并不需要使用代码干预，工作量比较少，代码逻辑也更为清晰，更有利于维护。    
