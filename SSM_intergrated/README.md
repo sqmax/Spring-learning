@@ -4,7 +4,7 @@
 
 我们知道传统的web开发都有一个web.xml文件，由于在Servlet3.0之后的规范允许取消web.xml配置，只使用注解方式就可以了，我这里对两种方式都有总结，分开为两个项目`springmvc-xml`，`springmvc-java`，分别是使用xml配置的和使用java进行配置的。
 
-## 使用xml配置SSM整合开发
+## 一、使用xml配置SSM整合开发
 
 > 项目源码：[xml配置SSM整合开发Demo](https://github.com/sqmax/Spring-learning/tree/master/SSM_intergrated/springmvc-xml)
 
@@ -186,7 +186,7 @@
 上面就是使用xml的方式对SSM整合开发的最基本配置，项目复杂时，需要更多配置，而且配置也是多样的，xml配置和java配置共同存在。
 
 
-## java配置SSM整合开发
+## 二、java配置SSM整合开发
 
 >项目源码：[java配置SSM整合Demo](https://github.com/sqmax/Spring-learning/tree/master/SSM_intergrated/springmvc-java)
 
