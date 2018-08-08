@@ -4,7 +4,7 @@
 Spring框架的核心理念是IoC（控制反转）和AOP（面向切面编程），其中IoC是Spring框架的基础，而AOP则是其重要的功能。
 Spring IoC的核心理念就是通过容器来管理bean以及bean之间的依赖关系。而前提是我们通过一些方式声明bean。
 
-## Spring IoC容器
+## 一、Spring IoC容器
 
 Spring IoC容器的设计主要是基于BeanFactory和ApplicationContext两个接口，其中BeanFactory是Spring IoC容器所定义的最底层接口，而ApplicationContext是其高级接口之一。
 
@@ -14,7 +14,7 @@ Spring IoC容器的设计主要是基于BeanFactory和ApplicationContext两个�
 
 下面使用Spring实战的一个例子对Spring  bean的装配做总结。场景是，分别有一个请求（Quest）和骑士(Knight)的接口。对请求接口，有两个实现：营救少女的请求（RescueDamselQuest）和杀龙的请求（SlayDragonQuest）；对于骑士，也有两个实现：勇敢的骑士（BraveKnight）和营救少女的骑士（RescueDamselQuest），勇敢骑士的可以执行任何请求。
 
-## Spring Bean的声明
+## 二、Spring Bean的声明
 
 Spring通过容器来管理对象之间的依赖关系，首先我们需要先将需要Spring管理的对象声明出来，我参考的书上介绍的有些混乱，其实我觉得Spring只有如下三种方式来声明bean，来交给Spring容器管理。
 
@@ -110,7 +110,7 @@ public class DamselRescuingKnight implements Knight {
 ```
 这就是通知Spring对top.sqmax及其子包进行扫描，Spring就会去寻找被@Component注解的类，将其作为Spring的bean，纳入Spring容器中进行管理。
 
-## Spring bean的装配        
+## 三、Spring bean的装配        
 
 装配bean的方式，我觉得概括起来也只有一下三种。
 
@@ -173,7 +173,7 @@ public class DamselRescuingKnight implements Knight {
 }
 ```
 
-## 获取Spring bean
+## 四、获取Spring bean
 
 方式一：
 
@@ -200,7 +200,7 @@ AnnotationConfigApplicationContext context1=new AnnotationConfigApplicationConte
             (knight==knight1));
 ```
 
-## bean的作用域
+## 五、bean的作用域
 
 Spring提供了4种作用域，它会根据情况来决定是否生成新的对象。
 
